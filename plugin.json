@@ -1,0 +1,30 @@
+{
+    "id": "materialPlayer",
+    "name": "Material Player & Lyrics",
+    "description": "Desktop media player widget with real-time synced lyrics and Material You 3 design",
+    "category": "media",
+    "version": "1.0.0",
+    "author": "Samir Badaila",
+    "icon": "music_note",
+    "type": "composite",
+    "firstParty": true,
+    "components": {
+        "widget": "./MaterialPlayer.qml",
+        "desktop": "./MaterialPlayer.qml"
+    },
+    "settings": "./MaterialPlayerSettings.qml",
+    "capabilities": [
+        "desktop-widget"
+    ],
+    "compositors": [
+        "any"
+    ],
+    "distro": [
+        "any"
+    ],
+    "permissions": [
+        "process",
+        "settings_read",
+        "settings_write"
+    ]
+}
