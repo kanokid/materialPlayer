@@ -69,6 +69,13 @@ DesktopPluginComponent {
         return playersList[0];
     }
 
+    readonly property bool hasActiveMedia: activePlayer && activePlayer.trackTitle && activePlayer.trackTitle.trim().length > 0 && activePlayer.playbackState !== MprisPlaybackState.Stopped
+    readonly property bool showNoPlayerNow: !hasActiveMedia
+
+    opacity: showNoPlayerNow ? 0 : 1
+    visible: opacity > 0
+    Behavior on opacity { NumberAnimation { duration: 300; easing.type: Easing.OutCubic } }
+
     readonly property string trackTitle: (activePlayer && activePlayer.trackTitle) ? activePlayer.trackTitle : I18n.tr("No Media Playing")
     readonly property string trackArtist: (activePlayer && activePlayer.trackArtist) ? activePlayer.trackArtist : I18n.tr("Unknown Artist")
     readonly property string trackArtUrl: (activePlayer && activePlayer.trackArtUrl) ? activePlayer.trackArtUrl : ""

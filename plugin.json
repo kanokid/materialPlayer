@@ -3,7 +3,7 @@
     "name": "Material Player & Lyrics",
     "description": "Desktop media player widget with real-time synced lyrics and Material You 3 design",
     "category": "media",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Samir Badaila",
     "icon": "music_note",
     "type": "composite",
