@@ -6,7 +6,7 @@
     "version": "1.0.1",
     "author": "Samir Badaila",
     "icon": "music_note",
-    "type": "composite",
+    "type": "desktop",
     "firstParty": true,
     "components": {
         "widget": "./MaterialPlayer.qml",
